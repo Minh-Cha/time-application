@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDatePicker from 'react-datepicker';
+import ReactDatePicker, { registerLocale } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -12,7 +12,6 @@ interface DatePickerProps {
   onDateChange: (date: Date | null) => void;
   onFetchData: () => void; // Function to call when the "Fetch Data" button is clicked
 }
-
 const theme = createTheme({
   components: {
     MuiButton: {
@@ -29,7 +28,6 @@ const theme = createTheme({
     },
   },
 });
-
 const DatePicker: React.FC<DatePickerProps> = ({ selectedDate, onDateChange, onFetchData }) => {
   return (
     <ThemeProvider theme={theme}>
