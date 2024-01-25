@@ -10,6 +10,9 @@ const App: React.FC = () => {
     setSelectedDate(date);
   }, []);
 
+
+
+  
   // Function to fetch data based on the selected date, fetching data from one day before
   const handleFetchData = useCallback(() => {
     if (selectedDate) {
